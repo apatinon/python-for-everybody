@@ -4,7 +4,7 @@ if x > 10:
 if x < 10:
  print ('más pequeño')
 if x == 10:
- print ('es el mismo número tontopollas')
+ print ('es el mismo número')
 
 print ('listos')
 
