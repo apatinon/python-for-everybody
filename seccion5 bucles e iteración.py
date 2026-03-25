@@ -71,5 +71,7 @@ while True:
             masgrandre=num
     elif maspequeño is None:
             maspequeño=num
+    elif maspequeño<num:
+            maspequeño=num
 print("Maximum is", masgrandre)
 print("Minimum is", maspequeño)
