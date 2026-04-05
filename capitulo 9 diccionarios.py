@@ -42,3 +42,21 @@
 #for nombre in nombres:
 #        conteo[nombre] = conteo.get(nombre, 0)+1
 #print(conteo)
+
+#Escribe un programa que lea el archivo mbox-short.txt y determine quién ha enviado la mayor cantidad de correos electrónicos. El 
+# programa busca las líneas que comienzan con "From " y toma la segunda palabra de esas líneas como la persona que envió el correo.
+#El programa crea un diccionario en Python que asigna la dirección de correo del remitente a la cantidad de veces que aparece en el 
+# archivo.
+#Después de construir el diccionario, el programa recorre sus elementos usando un bucle maximum para encontrar al remitente más 
+# frecuente.
+
+name = input("Enter file:")
+fh = open(name)
+correos = dict()
+
+for line in fh:
+    if line.startswith('From '):
+        correo = line.split()[1]
+        correos[correo] = correos.get(correo, 0)+1
+mayor = max(correos, key=correos.get)
+print(mayor, correos[mayor])
